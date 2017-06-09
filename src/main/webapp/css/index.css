@@ -1,16 +1,6 @@
 #divMaisExterna{
-  /*
-    background-image: url("../images/planodefundo.png") ;
-    background-size: cover;
-    height:1280px;
-    */
-    /*  
-    width:1024px;
-    height:1280px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:center;
-/*    border-radius: 10px; */
+  background-color: rgba(0,0,0,0.5);
+  text-align: center
 }
 #painel-todos {
     margin-top: 20px;
@@ -18,4 +8,16 @@
 
 #botao-menu {
     margin-top: 500px;
+}
+
+h1{
+    color: #fff;
+}
+
+body{
+    background-image: url(../images/FundoCasaAzul.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
 }
