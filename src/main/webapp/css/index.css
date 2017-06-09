@@ -10,12 +10,23 @@
     margin-top: 500px;
 }
 
+#painel-configuracao{
+    align-items: flex-start;
+    color: #fff;
+}
+
+#editar-casa{
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+
 h1{
     color: #fff;
 }
 
 body{
-    background-image: url(../images/FundoCasaAzul.jpg);
+    background-image: url(../images/SalaEsverdeada.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;

@@ -31,9 +31,9 @@
 
                         <div class="collapse" id="navbar-automacao">
                             <ul class="nav navbar-nav">
-                                <li><a href="#editar-casa">Editar Casa</a></li>
-                                <li><a href="#adicionar-ambiente">Adicionar Ambiente</a></li>
-                                <li><a href="#adicionar-dispositivo">Adicionar Dispositivo</a></li>
+                                <li><button class="btn btn-link" data-toggle="collapse" data-target="#editar-casa" data-parent="#painel-cofiguracao">Editar Casa</button></li>
+                                <li><button class="btn btn-link" data-toggle="collapse" data-target="#adicionar-ambiente" data-parent="#painel-cofiguracao">Adicionar Ambiente</button></li>
+                                <li><button class="btn btn-link" data-toggle="collapse" data-target="#adicionar-dispositivo" data-parent="#painel-cofiguracao">Adicionar Dispositivo</button></li>
                             </ul>
                         </div>
                     </div>
@@ -47,11 +47,15 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2>Ambiente</h2>
-                            <h3 class="panel-title" data-toggle="collapse" data-target="#selecionar-ambiente" data-parent="#painel-todos">Escolher Ambiente</h3>
+                            <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-ambiente" data-parent="#painel-todos">Escolher Ambiente</button>
                         </div>
                         <div id="selecionar-ambiente" class="collapse"> 
                             <div class="panel-body">
-                                <p>Aqui entra a seleção do ambiente</p>
+                                <ul class="list-unstyled">
+                                    <li><button class="btn btn-link">Ambiente1</button></li>
+                                    <li><button class="btn btn-link">Ambiente2</button></li>
+                                    <li><button class="btn btn-link">Ambiente3</button></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -59,19 +63,72 @@
                         <div class="panel-heading">
                             <h2>Dispositivo</h2>
                 
-                            <h3 class="panel-title" data-toggle="collapse" data-target="#selecionar-dispositivo" data-parent="#painel-todos">Escolher Dispositivo</h3>
+                            <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-dispositivo" data-parent="#painel-todos">Escolher Dispositivo</button>
                         </div>
                         <div id="selecionar-dispositivo" class="collapse"> 
                             <div class="panel-body">
-                                <p>Aqui entra a seleção do dispositivo</p>
+                                <ul class="list-unstyled">
+                                    <li><button class="btn btn-link">Dispositivo1</button></li>
+                                    <li><button class="btn btn-link">Dispositivo2</button></li>
+                                    <li><button class="btn btn-link">Dispositivo3</button></li>
+                                </ul>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                
             </div>
+            <div id="painel-configuracao" class="panel-group">
+                <div id="editar-casa" class="collapse" >
+                    <div class="container">
 
+                        <form class="form-inline">
+                        <div class="form-group">
+                          <label for="nova-casa">Casa</label>
+                          <input type="text" class="form-control" id="nova-casa" placeholder="Editar Casa">
+                        </div>
+                        <button type="submit" class="btn btn-default">Editar Casa</button>
+                      </form>
+
+                    </div>
+                </div>
+                
+                <div id="adicionar-ambiente" class="collapse">
+                    <div class="container">
+
+                        <form class="form-inline">
+                        <div class="form-group">
+                          <label for="novo-ambiente">Ambiente</label>
+                          <input type="text" class="form-control" id="novo-ambiente" placeholder="Adicionar Ambiente">
+                        </div>
+                        <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
+                      </form>
+
+                    </div>
+                </div>
+                
+                <div id="adicionar-dispositivo" class="collapse">
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="input-group">
+                              <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ambiente <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Ambiente1</a></li>
+                                  <li><a href="#">Ambiente2</a></li>
+                                  <li><a href="#">Ambiente3</a></li>
+                                  
+                                </ul>
+                              </div><!-- /btn-group -->
+                              <input type="text" class="form-control" aria-label="...">
+                            </div><!-- /input-group -->
+                              <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
+                          </div><!-- /.col-lg-6 -->
+                        </div><!-- /.row -->
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
