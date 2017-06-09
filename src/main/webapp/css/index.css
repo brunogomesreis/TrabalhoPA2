@@ -1,12 +1,17 @@
 #divMaisExterna{
-/*  
+  /*
     background-image: url("../images/planodefundo.png") ;
     background-size: cover;
+    height:1280px;
     */
+    /*  
     width:1024px;
     height:1280px;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
 /*    border-radius: 10px; */
+}
+#painel-todos {
+    margin-top: 20px;
 }
