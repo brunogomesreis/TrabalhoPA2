@@ -46,18 +46,20 @@
                 <div id="painel-todos" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h2>Ambiente</h2>
+                            <h2 id="ambiente-escolhido">Ambiente</h2>
                             <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-ambiente" data-parent="#painel-todos">Escolher Ambiente</button>
                         </div>
-                        <div id="selecionar-ambiente" class="collapse"> 
-                            <div class="panel-body">
-                                <ul class="list-unstyled">
-                                    <li><button class="btn btn-link">Ambiente1</button></li>
-                                    <li><button class="btn btn-link">Ambiente2</button></li>
-                                    <li><button class="btn btn-link">Ambiente3</button></li>
-                                </ul>
+                        <section class="lista-de-ambientes">
+                            <div id="selecionar-ambiente" class="collapse"> 
+                                <div class="panel-body">
+                                    <ul class="list-unstyled">
+                                        <li><button class="btn btn-link" id="btnteste">Ambiente1</button></li>
+                                        <li><button class="btn btn-link">Ambiente2</button></li>
+                                        <li><button class="btn btn-link">Ambiente3</button></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -109,28 +111,32 @@
                 
                 <div id="adicionar-dispositivo" class="collapse">
                     <div class="container">
-                        <div class="row">
-                          <div class="col-lg-6">
-                            <div class="input-group">
-                              <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ambiente <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#">Ambiente1</a></li>
-                                  <li><a href="#">Ambiente2</a></li>
-                                  <li><a href="#">Ambiente3</a></li>
-                                  
-                                </ul>
-                              </div><!-- /btn-group -->
-                              <input type="text" class="form-control" aria-label="...">
-                            </div><!-- /input-group -->
-                              <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
-                          </div><!-- /.col-lg-6 -->
-                        </div><!-- /.row -->
+                        <form class="form-inline">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="input-group">
+                                  <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ambiente <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">Ambiente1</a></li>
+                                      <li><a href="#">Ambiente2</a></li>
+                                      <li><a href="#">Ambiente3</a></li>
+
+                                    </ul>
+                                  </div><!-- /btn-group -->
+                                  <input type="text" class="form-control" aria-label="...">
+                                </div><!-- /input-group -->
+                                  <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
+                              </div><!-- /.col-lg-6 -->
+                            </div><!-- /.row -->
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+        
     </body>
 </html>
