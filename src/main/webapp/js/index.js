@@ -12,6 +12,7 @@ function testandoAjax(){
 
 function insereAmbiente(){
     var ambiente =$(".lista-de-ambientes").find("ul");
-    ambiente.append("<li> VAI PRA CASA DO CARALHO </li>");
-    
+    for (i=0;i<5;i++){
+        ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">Ambiente"+i+"</button></li>");   
+    }
 }

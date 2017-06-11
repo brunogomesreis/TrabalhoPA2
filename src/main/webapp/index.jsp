@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,8 +50,8 @@
                             <h2 id="ambiente-escolhido">Ambiente</h2>
                             <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-ambiente" data-parent="#painel-todos">Escolher Ambiente</button>
                         </div>
-                        <section class="lista-de-ambientes">
-                            <div id="selecionar-ambiente" class="collapse"> 
+                        <div id="selecionar-ambiente" class="collapse"> 
+                            <section class="lista-de-ambientes">
                                 <div class="panel-body">
                                     <ul class="list-unstyled">
                                         <li><button class="btn btn-link" id="btnteste">Ambiente1</button></li>
@@ -58,8 +59,8 @@
                                         <li><button class="btn btn-link">Ambiente3</button></li>
                                     </ul>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -69,11 +70,13 @@
                         </div>
                         <div id="selecionar-dispositivo" class="collapse"> 
                             <div class="panel-body">
-                                <ul class="list-unstyled">
-                                    <li><button class="btn btn-link">Dispositivo1</button></li>
-                                    <li><button class="btn btn-link">Dispositivo2</button></li>
-                                    <li><button class="btn btn-link">Dispositivo3</button></li>
-                                </ul>
+                                <section>
+                                    <ul class="list-unstyled">
+                                        <li><button class="btn btn-link">Dispositivo1</button></li>
+                                        <li><button class="btn btn-link">Dispositivo2</button></li>
+                                        <li><button class="btn btn-link">Dispositivo3</button></li>
+                                    </ul>
+                                </section>
                             </div>
                         </div>
 

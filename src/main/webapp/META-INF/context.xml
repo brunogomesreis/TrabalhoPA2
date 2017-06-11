@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/TrabalhoPA2_v2"/>
+<Context path="/TrabalhoPA2_v2">
+<Resource 
+      name="jdbc/domotica1"
+      url="jdbc:postgresql://localhost:5432/domotica1"
+      username="postgres"
+      password="sql"
+
+      driverClassName="org.postgresql.Driver"
+      type="javax.sql.DataSource"
+
+      auth="Container"
+      logAbandoned="false"
+      maxActive="200"
+      maxIdle="100"
+      maxWait="-1"
+      removeAbandoned="true"
+      removeAbandonedTimeout="60"
+  />
+</Context>
