@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.brunogomesreis.trabalhopa2_v2.DAO;
+package com.brunogomesreis.trabalhopa2_v2.DTO;
 
 import java.io.Serializable;
 

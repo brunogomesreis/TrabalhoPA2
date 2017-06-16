@@ -43,7 +43,7 @@
             
         <div id="divMaisExterna">
             <div class="container">
-                <h1>Minha Casa</h1>
+                <h1 id="minha-casa">Minha Casa</h1>
                 <div id="painel-todos" class="panel-group">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -52,12 +52,14 @@
                         </div>
                         <div id="selecionar-ambiente" class="collapse"> 
                             <section class="lista-de-ambientes">
-                                <div class="panel-body">
+                                <div class="panel-body" id="lista-de-ambientes">
+                                    
                                     <ul class="list-unstyled">
                                         <li><button class="btn btn-link" id="btnteste">Ambiente1</button></li>
                                         <li><button class="btn btn-link">Ambiente2</button></li>
                                         <li><button class="btn btn-link">Ambiente3</button></li>
                                     </ul>
+                                    
                                 </div>
                             </section>
                         </div>
@@ -91,8 +93,7 @@
                         <div class="form-group">
                           <label for="nova-casa">Casa</label>
                           <input type="text" class="form-control" id="nova-casa" placeholder="Editar Casa">
-                        </div>
-                        <button type="submit" class="btn btn-default">Editar Casa</button>
+                         <button class="btn btn-link" id="btn-editar-casa">Editar Casa</button>
                       </form>
 
                     </div>
@@ -132,7 +133,8 @@
                                   <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
                               </div><!-- /.col-lg-6 -->
                             </div><!-- /.row -->
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

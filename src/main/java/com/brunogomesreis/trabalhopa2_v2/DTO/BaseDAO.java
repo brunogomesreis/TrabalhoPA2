@@ -1,5 +1,5 @@
 
-package com.brunogomesreis.trabalhopa2_v2.DAO;
+package com.brunogomesreis.trabalhopa2_v2.DTO;
 
 
 import java.sql.Connection;
