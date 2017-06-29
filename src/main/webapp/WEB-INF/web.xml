@@ -4,9 +4,17 @@
         <servlet-name>Casa</servlet-name>
         <servlet-class>com.brunogomesreis.trabalhopa2_v2.ajaxComJSON.Casa</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Ambientes</servlet-name>
+        <servlet-class>com.brunogomesreis.trabalhopa2_v2.ajaxComJSON.Ambientes</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Casa</servlet-name>
         <url-pattern>/casa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ambientes</servlet-name>
+        <url-pattern>/Ambientes</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

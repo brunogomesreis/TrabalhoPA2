@@ -46,14 +46,13 @@ public class Casa extends HttpServlet {
         
         // Agora é só responder...
         CasaParametros casa = new CasaParametros();
-        casa.setNome(textoDoJson);
         CasaDAO casas = new CasaDAO();
-        casas.doUpdate(casa);
-        
-        response.setContentType("application/json;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        out.print(casa.toString());
-        out.flush();
+        casas.doRead(casa);
+        System.out.println("ENTREI NA CARALHA DO CASA.JAVA Atualizado");
+        //String casaJson = new Gson().toJson(casa);
+        response.setContentType("text/plain");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(casa.getNome());
         
     }
 
@@ -69,7 +68,7 @@ public class Casa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
+        processRequest(request, response);
         /*
         //Aqui eu imprimo o Hello World
         String data = "Hello World!";
@@ -86,13 +85,6 @@ public class Casa extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(listaAmbientesJSON);
          */
-        CasaParametros casa = new CasaParametros();
-        CasaDAO casas = new CasaDAO();
-        casas.doRead(casa);
-        //String casaJson = new Gson().toJson(casa);
-        response.setContentType("text/plain");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write(casa.getNome());
         
     }
 
