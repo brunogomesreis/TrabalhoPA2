@@ -11,14 +11,14 @@
 
 //Botões
 //$("#btnteste").click(testandoPost);
-$("#btnteste2").click(testandoGetJSON);
+//$("#btnteste2").click(testandoGetJSON);
 //Muda o titulo da pagina com o nome da casa
 $.post('casa', function(data){
         //alert(data);
         $("#minha-casa").text(data);
     });
 listaAmbientes();
-
+listaDispositivos();
 
 
 //Métodos usados
@@ -43,6 +43,26 @@ function listaAmbientes(){
         });
 }
 
+function listaDispositivos(){
+    alert("Entrei no testando post");
+    console.log("entrei no testando post");
+    $.ajax({
+        method: "POST",
+        url: "Dispositivos"
+      })
+        .done(function( msg ) {
+            alert( "Data Saved: " + msg );
+            var dispositivos = [];
+            $.each(msg, function(index, value ) {
+                dispositivos.push(value);
+            });
+            var ambiente =$(".lista-de-dispositivos").find("ul");
+            for (i=0;i<dispositivos.length;i++){
+                ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">"+dispositivos[i]+"</button></li>");   
+            }
+  
+        });
+}
 
 
 

@@ -53,11 +53,7 @@
                         <div id="selecionar-ambiente" class="collapse"> 
                             <section class="lista-de-ambientes">
                                 <div class="panel-body" id="lista-de-ambientes">
-                                    
-                                    <ul class="list-unstyled">
-                                        
-                                    </ul>
-                                    
+                                    <ul class="list-unstyled"></ul>
                                 </div>
                             </section>
                         </div>
@@ -69,18 +65,17 @@
                             <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-dispositivo" data-parent="#painel-todos">Escolher Dispositivo</button>
                         </div>
                         <div id="selecionar-dispositivo" class="collapse"> 
-                            <div class="panel-body">
-                                <section>
+                            <section class="lista-de-dispositivos">
+                                <div class="panel-body" id="lista-de-dispositivos">
                                     <ul class="list-unstyled">
                                         <li><button class="btn btn-link">Dispositivo1</button></li>
                                         <li><button class="btn btn-link">Dispositivo2</button></li>
                                         <li><button class="btn btn-link">Dispositivo3</button></li>
                                     </ul>
-                                </section>
-                            </div>
+                                </div>
+                            </section>
                         </div>
-
-                    </div>
+</div>
                 </div>
             </div>
             <div id="painel-configuracao" class="panel-group">
