@@ -23,40 +23,28 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Ambientes extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        AmbientesDAO DataBaseTesteLista = new AmbientesDAO();
-        ArrayList<AmbientesParametros> Lista = DataBaseTesteLista.listaTodosAmbientes();
+        AmbientesDAO DataBaseParaLista = new AmbientesDAO();
+        ArrayList<AmbientesParametros> Lista = DataBaseParaLista.listaTodosAmbientes();
             
-        ArrayList<String> ListaDeStrings = new ArrayList();
-        //JsonObject jsonObject = null;
-        //String aux = jsonObject.toJSON(Lista);
-        //testando impressao
+        ArrayList<String> ListaDeAmbientes = new ArrayList();
         for (int i = 0; i < Lista.size(); i++) {
             
-            //System.out.println(Lista.get(i).getNome());
-            ListaDeStrings.add(Lista.get(i).getNome());
-            //System.out.println(ListaDeStrings.get(i));
+            System.out.println(Lista.get(i).getNome());
+            ListaDeAmbientes.add(Lista.get(i).getNome());
         }
         
-        System.out.println(ListaDeStrings);
+        //System.out.println(ListaDeStrings);
+            String gson =  new Gson().toJson(ListaDeAmbientes);
+
+                
         
-        Gson gson = new Gson();
-        String json = gson.toJson(target, listType);
-        //json = new Gson().toJson(ListaDeStrings);
         
         System.out.println("Printando o json");
-        //System.out.println(json);
+        System.out.println(gson);
         
        
         System.out.println("Entrei no Ambientes");
@@ -64,7 +52,7 @@ public class Ambientes extends HttpServlet {
         
         PrintWriter out = response.getWriter();
         //out.print(dto.toString());
-        out.print(json);
+       out.print(gson);
         //System.out.println(json);
         out.flush();
     }

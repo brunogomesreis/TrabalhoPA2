@@ -32,14 +32,11 @@ public class Casa extends HttpServlet {
         String textoDoJson = br.readLine();
         
         JsonObject jsonObjectDeJava = null;
-        // Ler e fazer o parsing do String para o "objeto json" java
-        try (   //Converte o string em "objeto json" java
-                // Criar um JsonReader.
+        
+        try (   
                 JsonReader readerDoTextoDoJson = 
                         Json.createReader(new StringReader(textoDoJson))) {
-                // Ler e fazer o parsing do String para o "objeto json" java
                 jsonObjectDeJava = readerDoTextoDoJson.readObject();
-                // Acabou, então fechar o reader.
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -49,7 +46,7 @@ public class Casa extends HttpServlet {
         CasaDAO casas = new CasaDAO();
         casas.doRead(casa);
         System.out.println("ENTREI NA CARALHA DO CASA.JAVA Atualizado");
-        //String casaJson = new Gson().toJson(casa);
+        
         response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(casa.getNome());

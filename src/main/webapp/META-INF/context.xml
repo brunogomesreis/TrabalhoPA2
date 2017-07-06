@@ -2,7 +2,7 @@
 <Context path="/TrabalhoPA2_v2">
 <Resource 
       name="jdbc/domotica1"
-      url="jdbc:postgresql://localhost:5432/domotica1"
+      url="jdbc:postgresql://localhost:5432/domotica2"
       username="postgres"
       password="sql"
 
