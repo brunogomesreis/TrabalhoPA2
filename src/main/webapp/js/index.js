@@ -5,11 +5,22 @@
  */
 
 
-$("#btnteste").click(testandoPost);
 
-//colocando o nome da casa
 
-function testandoPost(){
+//Inicialização
+
+//Botões
+//$("#btnteste").click(testandoPost);
+$("#btnteste2").click(testandoGetJSON);
+//Muda o titulo da pagina com o nome da casa
+$.post('casa', function(data){
+        //alert(data);
+        $("#minha-casa").text(data);
+    });
+
+
+//Métodos usados
+function listaAmbientes(){
     alert("Entrei no testando post");
     console.log("entrei no testando post");
     $.ajax({
@@ -17,13 +28,21 @@ function testandoPost(){
         url: "Ambientes"
       })
         .done(function( msg ) {
-          alert( "Data Saved: " + msg );
-  
+            alert( "Data Saved: " + msg );
+            var ambientes = [];
+            $.each(msg, function( index, value ) {
+                ambientes.push(value);
+            });
+            var ambiente =$(".lista-de-ambientes").find("ul");
+            for (i=0;i<ambientes.length;i++){
+                ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">"+ambientes[i]+"</button></li>");   
+            }
   
         });
 }
 
-//teste para listar os ambinetes
+
+//Funções para teste
 function testandoJSON(){
     var ambientes =$(".lista-de-ambientes").find("ul");
     
@@ -40,7 +59,23 @@ function testandoJSON(){
   });
 }
 
-
+function testandoGetJSON(){
+    $.getJSON( "Ambientes", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      items.push( "<li id='" + key + "'>" + val + "</li>" );
+    });
+    var ambiente =$(".lista-de-ambientes").find("ul");
+            for (i=0;i<5;i++){
+                ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">"+msg+"</button></li>");   
+            }
+    //$( "<ul/>", {
+    //  "class": "my-new-list",
+    //  html: items.join( "" )
+    //}).appendTo( "body" );
+    
+  });
+}
 
 function testandoAjax(){
     $.get('Ambientes', function(data){
@@ -50,24 +85,20 @@ function testandoAjax(){
     });
 }
 
-//Funcao teste para conseguir acrescentar itens na lista
 function insereAmbiente(){
+    //Funcao teste para conseguir acrescentar itens na lista
     alert("To chegando no testandoAjax");
     var ambiente =$(".lista-de-ambientes").find("ul");
     for (i=0;i<5;i++){
         ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">Ambiente"+i+"</button></li>");   
     }
 }
-//Essa Funcao deveria atualizar o nome da casa no BD
+
 function atualizarCasa(){
+    //Essa Funcao deveria atualizar o nome da casa no BD
     var nomeCasa = {
         "nome": $("#nova-casa").val()
     };
 
     $.post("Casa", nomeCasa);
 }
-//Muda o titulo da pagina com o nome da casa
-$.post('casa', function(data){
-        //alert(data);
-        $("#minha-casa").text(data);
-    });
