@@ -55,9 +55,7 @@
                                 <div class="panel-body" id="lista-de-ambientes">
                                     
                                     <ul class="list-unstyled">
-                                        <li><button class="btn btn-link" id="btnteste">Ambiente1</button></li>
-                                        <li><button class="btn btn-link">Ambiente2</button></li>
-                                        <li><button class="btn btn-link">Ambiente3</button></li>
+                                        
                                     </ul>
                                     
                                 </div>
