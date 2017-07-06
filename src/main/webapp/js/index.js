@@ -17,18 +17,20 @@ $.post('casa', function(data){
         //alert(data);
         $("#minha-casa").text(data);
     });
+listaAmbientes();
+
 
 
 //Métodos usados
 function listaAmbientes(){
-    alert("Entrei no testando post");
+    //alert("Entrei no testando post");
     console.log("entrei no testando post");
     $.ajax({
         method: "POST",
         url: "Ambientes"
       })
         .done(function( msg ) {
-            alert( "Data Saved: " + msg );
+            //alert( "Data Saved: " + msg );
             var ambientes = [];
             $.each(msg, function( index, value ) {
                 ambientes.push(value);
@@ -40,6 +42,8 @@ function listaAmbientes(){
   
         });
 }
+
+
 
 
 //Funções para teste
