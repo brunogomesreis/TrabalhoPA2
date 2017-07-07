@@ -13,6 +13,7 @@ alteraNomeCasa();
 //testandoJSON();
 listaAmbientes2();
 listaDispositivos2();
+enviandoPOST()
 //Botões
 
 //Métodos usados
@@ -72,18 +73,8 @@ function alteraNomeCasa(){
 
 //Funções para teste
 function enviandoPOST(){
-    var xhr = new XMLHttpRequest();
-var url = "url";
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-type", "application/json");
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var json = JSON.parse(xhr.responseText);
-        console.log(json.email + ", " + json.password);
-    }
-};
-var data = JSON.stringify({"serial": "6", "nome": "banheiro"});
-xhr.send(data);
+  //alert("entrei no enviandoPOST");
+  $.post( "Adiciona_Ambientes", { serial: "5", nome: "Banheiro" } );
 }
 
 function testandoJSON(){

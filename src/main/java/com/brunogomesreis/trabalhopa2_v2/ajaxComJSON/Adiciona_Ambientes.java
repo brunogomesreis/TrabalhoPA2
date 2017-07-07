@@ -8,7 +8,9 @@ package com.brunogomesreis.trabalhopa2_v2.ajaxComJSON;
 import com.brunogomesreis.trabalhopa2_v2.DTO.AmbientesDAO;
 import com.brunogomesreis.trabalhopa2_v2.DTO.AmbientesParametros;
 import com.google.gson.Gson;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,35 +29,42 @@ public class Adiciona_Ambientes extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
+        System.out.println("Entrei no Adiciona_ambientes");
+        
+           BufferedReader br = new BufferedReader(
+                                  new  InputStreamReader(
+                                           request.getInputStream(),"UTF8"));
+        String textoDoJson = br.readLine();
+        System.out.println(textoDoJson);
+        
+        AmbientesDAO ambientes = new AmbientesDAO();
+        AmbientesParametros ambiente = new AmbientesParametros();
+        
+        ambiente.setNome(textoDoJson);
+        
+        
+        /**
         AmbientesDAO DataBaseParaLista = new AmbientesDAO();
         ArrayList<AmbientesParametros> Lista = DataBaseParaLista.listaTodosAmbientes();
-            
         ArrayList<String> ListaDeAmbientes = new ArrayList();
         for (int i = 0; i < Lista.size(); i++) {
-            
-            System.out.println(Lista.get(i).getNome());
-            ListaDeAmbientes.add(Lista.get(i).getNome());
+        System.out.println(Lista.get(i).getNome());
+        ListaDeAmbientes.add(Lista.get(i).getNome());
         }
-        
         //System.out.println(ListaDeStrings);
-           // String gson =  new Gson().toJson(ListaDeAmbientes);
-            String gson2 =  new Gson().toJson(Lista);
-           
-                
-        
-        
+        // String gson =  new Gson().toJson(ListaDeAmbientes);
+        String gson2 =  new Gson().toJson(Lista);
         System.out.println("Printando o json");
         System.out.println(gson2);
-        
-       
         System.out.println("Entrei no Ambientes");
         response.setContentType("application/json;charset=UTF-8");
-        
         PrintWriter out = response.getWriter();
         //out.print(dto.toString());
-       out.print(gson2);
+        out.print(gson2);
         //System.out.println(json);
         out.flush();
+         **/ 
+ 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
