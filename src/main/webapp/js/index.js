@@ -13,9 +13,12 @@ alteraNomeCasa();
 //testandoJSON();
 listaAmbientes2();
 listaDispositivos2();
-enviandoPOST()
 //Botões
-
+$("#btn-adicionar-ambiente").click(function (){
+    var ambiente = $("#novo-ambiente").val();
+    alert(ambiente + " Adicionado(a)");
+    $.post( "Adiciona_Ambientes", ambiente );
+});
 //Métodos usados
 
 function listaAmbientes2(){
@@ -70,11 +73,17 @@ function alteraNomeCasa(){
     });
 }
 
+function adicionaAmbiente(ambiente){
+    alert("entrei no adicionaAmbiente");
+    alert(ambiente);
+    $.post( "Adiciona_Ambientes", ambiente );
+}
+
 
 //Funções para teste
 function enviandoPOST(){
   //alert("entrei no enviandoPOST");
-  $.post( "Adiciona_Ambientes", { serial: "5", nome: "Banheiro" } );
+  $.post( "Adiciona_Ambientes", "Banheiro" );
 }
 
 function testandoJSON(){

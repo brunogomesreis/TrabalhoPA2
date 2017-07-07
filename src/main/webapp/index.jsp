@@ -96,7 +96,7 @@
                           <label for="novo-ambiente">Ambiente</label>
                           <input type="text" class="form-control" id="novo-ambiente" placeholder="Adicionar Ambiente">
                         </div>
-                        <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
+                        <button type="submit" class="btn btn-default" id="btn-adicionar-ambiente">Adicionar Ambiente</button>
                       </form>
 
                     </div>

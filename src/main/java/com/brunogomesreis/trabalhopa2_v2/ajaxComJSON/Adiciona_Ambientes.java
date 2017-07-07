@@ -39,9 +39,9 @@ public class Adiciona_Ambientes extends HttpServlet {
         
         AmbientesDAO ambientes = new AmbientesDAO();
         AmbientesParametros ambiente = new AmbientesParametros();
-        
+       
         ambiente.setNome(textoDoJson);
-        
+        ambientes.doCreate(ambiente);
         
         /**
         AmbientesDAO DataBaseParaLista = new AmbientesDAO();
