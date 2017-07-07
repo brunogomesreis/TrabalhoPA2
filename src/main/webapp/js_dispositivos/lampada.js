@@ -1,8 +1,10 @@
 
 
-function iniciar(disp){
+function iniciar(){
     // A DIV DA LÂMPADA FOI FEITA NO HTML NORMAL E DEPOIS COPIADA PARA O JAVASCRIPT ;))
     alert("TO NO LAMPADA! #CHUPA");
+    
+    /*
     var divJanelaDaLampada = document.createElement('div');
     divJanelaDaLampada.setAttribute('id',disp.iddiv);
     divJanelaDaLampada.style.cssText = 
@@ -40,7 +42,7 @@ function iniciar(disp){
         // fazer alguma coisa...
         document.getElementById('respostaEstado'+disp.serial).innerHTML = estado;
     }
-    
+    */
 //alert('Iniciou a Lâmpada');    
 }
 
