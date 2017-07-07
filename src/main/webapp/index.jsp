@@ -119,7 +119,7 @@
                                   </div><!-- /btn-group -->
                                   <input type="text" class="form-control" aria-label="...">
                                 </div><!-- /input-group -->
-                                  <button type="submit" class="btn btn-default">Adicionar Ambiente</button>
+                                  <button type="submit" class="btn btn-default">Adicionar Dispositivo</button>
                               </div><!-- /.col-lg-6 -->
                             </div><!-- /.row -->
                             </form>

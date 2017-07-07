@@ -16,6 +16,10 @@
         <servlet-name>Adiciona_Ambientes</servlet-name>
         <servlet-class>com.brunogomesreis.trabalhopa2_v2.ajaxComJSON.Adiciona_Ambientes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Adiciona_Casa</servlet-name>
+        <servlet-class>com.brunogomesreis.trabalhopa2_v2.ajaxComJSON.Adiciona_Casa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Casa</servlet-name>
         <url-pattern>/casa</url-pattern>
@@ -28,9 +32,13 @@
         <servlet-name>Dispositivos</servlet-name>
         <url-pattern>/Dispositivos</url-pattern>
     </servlet-mapping>
-      <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Adiciona_Ambientes</servlet-name>
         <url-pattern>/Adiciona_Ambientes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Adiciona_Casa</servlet-name>
+        <url-pattern>/Adiciona_Casa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,6 +19,12 @@ $("#btn-adicionar-ambiente").click(function (){
     alert(ambiente + " Adicionado(a)");
     $.post( "Adiciona_Ambientes", ambiente );
 });
+$("#btn-editar-casa").click(function (){
+    var casa = $("#nova-casa").val();
+    alert("Nome da Casa Alterado");
+    $.post( "Adiciona_Casa", casa );
+});
+
 //Métodos usados
 
 function listaAmbientes2(){
