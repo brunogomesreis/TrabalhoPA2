@@ -71,7 +71,7 @@
                                 </div>
                             </section>
                         </div>
-</div>
+                    </div>
                 </div>
             </div>
             <div id="painel-configuracao" class="panel-group">
@@ -79,12 +79,12 @@
                     <div class="container">
 
                         <form class="form-inline">
-                        <div class="form-group">
-                          <label for="nova-casa">Casa</label>
-                          <input type="text" class="form-control" id="nova-casa" placeholder="Editar Casa">
-                         <button class="btn btn-link" id="btn-editar-casa">Editar Casa</button>
-                      </form>
-
+                            <div class="form-group">
+                                <label for="nova-casa">Casa</label>
+                                <input type="text" class="form-control" id="nova-casa" placeholder="Editar Casa">
+                                <button class="btn btn-link" id="btn-editar-casa">Editar Casa</button>
+                             </div>
+                        </form>
                     </div>
                 </div>
                 
@@ -125,7 +125,6 @@
                             </form>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
         <script src="js/jquery.min.js"></script>

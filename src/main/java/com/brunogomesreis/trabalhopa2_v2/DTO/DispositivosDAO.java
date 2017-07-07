@@ -91,6 +91,7 @@ public class DispositivosDAO extends BaseDAO {
                 DispositivoTemporario = new DispositivosParametros();
                 DispositivoTemporario.setSerialambiente(resultset.getInt("serialambientes"));
                 DispositivoTemporario.setNome(resultset.getString("nome"));
+                DispositivoTemporario.setSerialdispositivo(resultset.getInt("serialdispositivo"));
                 
                 listaTodosDispositivos.add(DispositivoTemporario);
             }
