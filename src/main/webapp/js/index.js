@@ -10,8 +10,9 @@
 //Inicialização
 
 alteraNomeCasa();
-listaAmbientes();
-listaDispositivos();
+//testandoJSON();
+listaAmbientes2();
+listaDispositivos2();
 //Botões
 
 //Métodos usados
@@ -38,6 +39,28 @@ function listaAmbientes(){
   
         });
 }
+
+function listaAmbientes2(){
+    //alert("Entrei no testando post");
+    console.log("entrei no testando post");
+    $.ajax({
+        method: "POST",
+        url: "Ambientes"
+      })
+        .done(function( data ) {
+            //alert( "Data Saved: " + msg );
+            var ambiente =$(".lista-de-ambientes").find("ul");
+           
+            for (i=0;i<data.length;i++){
+                ambiente.append("<li><button class=\"btn btn-link \" id=\"btn-ambiente-"+ data[i].serialambiente+ "\">"+ data[i].nome +"</button></li>");   
+                $("#btn-ambiente-"+ data[i].serialambiente).click(function (){
+                $("#ambiente-escolhido").text(this.innerHTML);
+                });
+            }       
+  
+        });
+}
+
 
 function listaDispositivos(){
     //alert("Entrei no testando post");
@@ -66,6 +89,31 @@ function listaDispositivos(){
         });
 }
 
+function listaDispositivos2(){
+    //alert("Entrei no testando post");
+    console.log("entrei no testando post");
+    $.ajax({
+        method: "POST",
+        url: "Dispositivos"
+      })
+        .done(function( msg ) {
+      //      alert( "Data Saved: " + msg );
+            
+            var dispositivo =$(".lista-de-dispositivos").find("ul");
+            for (i=0;i<msg.length;i++){
+                dispositivo.append("<li><button class=\"btn btn-link\" id=\""+msg[i].serialdispositivo+"\">"+msg[i].nome+"</button></li>");   
+                $("#"+ msg[i].serialdispositivo).click(function (){
+                $("#dispositivo-escolhido").text(this.innerHTML);
+                if (this.innerHTML==="lampada"){
+                    iniciar();
+                }
+                });
+            }
+  
+        });
+}
+
+
 function alteraNomeCasa(){
     $.post('casa', function(data){
         //alert(data);
@@ -80,9 +128,9 @@ function testandoJSON(){
     
     $.getJSON( 'Ambientes', function( data ) {
     var items = [];
-    $.each( data, function( key, val ) {
-      items.push( "<li id='" + key + "'>" + val + "</li>" );
-    });
+    for(i=0;i<data.length;i++){
+        items.push( "<li id='" + data[i].serialambiente + "'>" + data[i].nome + "</li>" );
+    }
 
     $( "<ul/>", {
       "class": "my-new-list",

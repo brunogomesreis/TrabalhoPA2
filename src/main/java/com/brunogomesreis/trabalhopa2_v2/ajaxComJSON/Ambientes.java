@@ -38,13 +38,14 @@ public class Ambientes extends HttpServlet {
         }
         
         //System.out.println(ListaDeStrings);
-            String gson =  new Gson().toJson(ListaDeAmbientes);
-
+           // String gson =  new Gson().toJson(ListaDeAmbientes);
+            String gson2 =  new Gson().toJson(Lista);
+           
                 
         
         
         System.out.println("Printando o json");
-        System.out.println(gson);
+        System.out.println(gson2);
         
        
         System.out.println("Entrei no Ambientes");
@@ -52,7 +53,7 @@ public class Ambientes extends HttpServlet {
         
         PrintWriter out = response.getWriter();
         //out.print(dto.toString());
-       out.print(gson);
+       out.print(gson2);
         //System.out.println(json);
         out.flush();
     }
