@@ -110,10 +110,10 @@
                                 <div class="input-group">
                                   <div class="input-group-btn">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ambiente <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">Ambiente1</a></li>
-                                      <li><a href="#">Ambiente2</a></li>
-                                      <li><a href="#">Ambiente3</a></li>
+                                    <ul class="dropdown-menu" id="ambientes-dropdown">
+                                      <li><a href="#">Sala</a></li>
+                                      <li><a href="#">Quarto</a></li>
+                                      <li><a href="#">Quarto</a></li>
 
                                     </ul>
                                   </div><!-- /btn-group -->

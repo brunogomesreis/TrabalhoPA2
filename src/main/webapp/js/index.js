@@ -26,8 +26,8 @@ function listaAmbientes2(){
       })
         .done(function( data ) {
             //alert( "Data Saved: " + msg );
-            var ambiente =$(".lista-de-ambientes").find("ul");
-           
+            var ambiente = $(".lista-de-ambientes").find("ul");
+            
             for (i=0;i<data.length;i++){
                 ambiente.append("<li><button class=\"btn btn-link \" id=\"btn-ambiente-"+ data[i].serialambiente+ "\">"+ data[i].nome +"</button></li>");   
                 $("#btn-ambiente-"+ data[i].serialambiente).click(function (){
@@ -71,6 +71,21 @@ function alteraNomeCasa(){
 
 
 //Funções para teste
+function enviandoPOST(){
+    var xhr = new XMLHttpRequest();
+var url = "url";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var json = JSON.parse(xhr.responseText);
+        console.log(json.email + ", " + json.password);
+    }
+};
+var data = JSON.stringify({"serial": "6", "nome": "banheiro"});
+xhr.send(data);
+}
+
 function testandoJSON(){
     var ambientes =$(".lista-de-ambientes").find("ul");
     
