@@ -60,18 +60,14 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h2>Dispositivo</h2>
+                            <h2 id="dispositivo-escolhido">Dispositivo</h2>
                 
                             <button class="btn btn-link panel-title" data-toggle="collapse" data-target="#selecionar-dispositivo" data-parent="#painel-todos">Escolher Dispositivo</button>
                         </div>
                         <div id="selecionar-dispositivo" class="collapse"> 
                             <section class="lista-de-dispositivos">
                                 <div class="panel-body" id="lista-de-dispositivos">
-                                    <ul class="list-unstyled">
-                                        <li><button class="btn btn-link">Dispositivo1</button></li>
-                                        <li><button class="btn btn-link">Dispositivo2</button></li>
-                                        <li><button class="btn btn-link">Dispositivo3</button></li>
-                                    </ul>
+                                    <ul class="list-unstyled"></ul>
                                 </div>
                             </section>
                         </div>

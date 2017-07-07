@@ -9,17 +9,10 @@
 
 //Inicialização
 
-//Botões
-//$("#btnteste").click(testandoPost);
-//$("#btnteste2").click(testandoGetJSON);
-//Muda o titulo da pagina com o nome da casa
-$.post('casa', function(data){
-        //alert(data);
-        $("#minha-casa").text(data);
-    });
+alteraNomeCasa();
 listaAmbientes();
 listaDispositivos();
-
+//Botões
 
 //Métodos usados
 function listaAmbientes(){
@@ -37,33 +30,45 @@ function listaAmbientes(){
             });
             var ambiente =$(".lista-de-ambientes").find("ul");
             for (i=0;i<ambientes.length;i++){
-                ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">"+ambientes[i]+"</button></li>");   
+                ambiente.append("<li><button class=\"btn btn-link \" id=\"btn-ambiente"+i+"\">"+ambientes[i]+"</button></li>");   
+                $("#btn-ambiente"+i).click(function (){
+                $("#ambiente-escolhido").text(this.innerHTML);
+                });
             }
   
         });
 }
 
 function listaDispositivos(){
-    alert("Entrei no testando post");
+    //alert("Entrei no testando post");
     console.log("entrei no testando post");
     $.ajax({
         method: "POST",
         url: "Dispositivos"
       })
         .done(function( msg ) {
-            alert( "Data Saved: " + msg );
+      //      alert( "Data Saved: " + msg );
             var dispositivos = [];
             $.each(msg, function(index, value ) {
                 dispositivos.push(value);
             });
-            var ambiente =$(".lista-de-dispositivos").find("ul");
+            var dispositivo =$(".lista-de-dispositivos").find("ul");
             for (i=0;i<dispositivos.length;i++){
-                ambiente.append("<li><button class=\"btn btn-link\" id=\"btnteste\">"+dispositivos[i]+"</button></li>");   
+                dispositivo.append("<li><button class=\"btn btn-link\" id=\"btn-dispositivo"+i+"\">"+dispositivos[i]+"</button></li>");   
+                $("#btn-dispositivo"+i).click(function (){
+                $("#dispositivo-escolhido").text(this.innerHTML);
+                });
             }
   
         });
 }
 
+function alteraNomeCasa(){
+    $.post('casa', function(data){
+        //alert(data);
+        $("#minha-casa").text(data);
+    });
+}
 
 
 //Funções para teste
@@ -81,6 +86,11 @@ function testandoJSON(){
       html: items.join( "" )
     }).appendTo( ambientes );
   });
+}
+
+function alterarNomeAmbiente(nome){
+    console.log("Alterando a caralha do nome");
+    $("#ambiente-escolhido").text(nome);
 }
 
 function testandoGetJSON(){
