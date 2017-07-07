@@ -57,6 +57,9 @@ function listaDispositivos(){
                 dispositivo.append("<li><button class=\"btn btn-link\" id=\"btn-dispositivo"+i+"\">"+dispositivos[i]+"</button></li>");   
                 $("#btn-dispositivo"+i).click(function (){
                 $("#dispositivo-escolhido").text(this.innerHTML);
+                if (this.innerHTML==="lampada"){
+                    iniciar();
+                }
                 });
             }
   
