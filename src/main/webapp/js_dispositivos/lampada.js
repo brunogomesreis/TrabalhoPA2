@@ -2,13 +2,26 @@
 
 function iniciar(id){
     // A DIV DA LÂMPADA FOI FEITA NO HTML NORMAL E DEPOIS COPIADA PARA O JAVASCRIPT ;))
-    alert("TO NO LAMPADA! #CHUPA");
-    alert(id);
+    //alert("TO NO LAMPADA! #CHUPA");
+    //alert(id);
     
     
-    //var dispositivo =$("#lista-de-dispositivos");
+    var painel = $("#controle-dispositivo");
+    painel.append("<h1>Controle da Lampada "+ id + "</h1>");
+    painel.append(" <button class=\"btn-success btn\" id=\"liga-lampada-"+id+"\">Liga</button>");
+    painel.append(" <button class=\"btn-danger btn\" id=\"desliga-lampada-"+id+"\">Desliga</button>");
+    painel.append(" <img src=\"images/luz-apagada.png\" id=\"luz-lampada-"+id+"\">");
+    $("#liga-lampada-"+id).click(function(){
+        //alert("entrei no liga-lampada");
+       $("#luz-lampada-"+id).attr("src","images/luz-acesa.png"); 
+    });
+    $("#desliga-lampada-"+id).click(function(){
+        //alert("entrei no liga-lampada");
+       $("#luz-lampada-"+id).attr("src","images/luz-apagada.png"); 
+    });
+   
     
-        document.body.appendChild("<div class='panel panel-default'>OLAAAA</div>");
+    
     //var divJanelaDaLampada = document.createElement('div');
     
   //  divJanelaDaLampada.setAttribute('id',"janela"+id);
