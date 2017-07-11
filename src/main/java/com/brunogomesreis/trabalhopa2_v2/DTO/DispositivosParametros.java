@@ -15,7 +15,17 @@ public class DispositivosParametros implements Serializable{
     private int serialdispositivo;
     private String nome;
     private int serialambiente;
+    private String status;
     
+    
+    
+    public String getStatus(){
+        return status;
+    }
+    
+    public void setStatus(String Status){
+        this.status = Status;
+    }
     
     public String getNome() {
         return nome;
