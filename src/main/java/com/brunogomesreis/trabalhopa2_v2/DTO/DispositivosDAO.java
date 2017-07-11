@@ -132,5 +132,38 @@ public class DispositivosDAO extends BaseDAO {
             return null;
         }
     }
+    
+    //Ainda não testado
+    public boolean updateStatus(String status) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement pstmt = con.prepareStatement(
+               "UPDATE dispositivos SET status=?;");
+            pstmt.setString(1, status);
+            pstmt.execute();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    public boolean readStatus(DispositivosParametros dto) {
+        //CERTAMENTE VAI DAR MERDA
+        try {
+            Connection con = getConnection();
+            PreparedStatement pstmt = con.prepareStatement(
+               "SELECT * FROM nomedacasa;");
+            ResultSet rst = pstmt.executeQuery();
+            rst.next();
+            dto.setStatus(rst.getString("nome"));
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    
   
 }
